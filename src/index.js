@@ -4,7 +4,7 @@ import './index.css';
 
   function Square(props) {
       return (
-          <button className="square" onClick={props.onClick}>
+          <button className="square " onClick={props.onClick}>
               {props.value}
           </button>
       );
@@ -86,11 +86,11 @@ import './index.css';
       const moves = history.map((step, move) => {
         const desc = move ?
           'Revenir au tour n°' + move : 
-          'Revenir au début de la partie';
+          'Revenir au tour n°0';
         return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
-          </li>
+          <div key={move}>
+            <button className="btn btn-primary mb-2 mr-4" onClick={() => this.jumpTo(move)}>{desc}</button>
+          </div>
         );
       });
 
@@ -102,18 +102,25 @@ import './index.css';
       }
 
       return (
+        
+        
         <div className="game">
-          <div className="game-board">
-            <Board 
-              squares={current.squares}
-              onClick={(i) => this.handleClick(i)}
-            />
+          <div className="row justify-content-center mb-2">
+            <div className="game-board mt-5">
+              <Board 
+                squares={current.squares}
+                onClick={(i) => this.handleClick(i)}
+              />
+            </div>
           </div>
-          <div className="game-info">
-            <div>{status}</div>
-            <ol>{moves}</ol>
+          <div className="row justify-content-center mb-2">  
+            <div className="game-info">
+                <div className="mt-5 mb-3 text-center">{status}</div>
+                <ol className="">{moves}</ol>
+            </div>
           </div>
         </div>
+       
       );
     }
   }
