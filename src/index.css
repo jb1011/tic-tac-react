@@ -1,6 +1,7 @@
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
+    background-color: #F0F8FF;
   }
   
  
@@ -12,7 +13,7 @@ body {
   }
     
   .square {
-    background: #fff;
+    background: #F0F8FF;
     border: 1px solid #999;
     float: left;
     font-size: 24px;

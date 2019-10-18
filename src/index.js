@@ -106,16 +106,18 @@ import './index.css';
         
         <div className="game">
           <div className="row justify-content-center mb-2">
+            
             <div className="game-board mt-5">
+            <div className="text-center h2 mb-3">Tic Tac Toe ?</div>
               <Board 
                 squares={current.squares}
                 onClick={(i) => this.handleClick(i)}
               />
             </div>
           </div>
-          <div className="row justify-content-center mb-2">  
+          <div className="row justify-content-center">  
             <div className="game-info">
-                <div className="mt-5 mb-3 text-center">{status}</div>
+                <div className="mt-5 mb-3 text-center h4">{status}</div>
                 <ol className="">{moves}</ol>
             </div>
           </div>
